@@ -4,7 +4,7 @@ const WIN_WIDTH = 480
 const WIN_HEIGHT = 260
 const MARGIN = 10
 const VELOCITY = 15
-
+const TICK_LENGTH = 15
 /**
  * Array to store the child windows spawned by this window.
  */
@@ -225,6 +225,6 @@ function moveWindowBounce () {
     if (y + height > SCREEN_HEIGHT - MARGIN) vy = -1 * Math.abs(vy)
 
     window.moveBy(vx, vy)
-  })
+  }, TICK_LENGTH)
 }
 moveWindowBounce()
